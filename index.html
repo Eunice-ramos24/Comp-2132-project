@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>COMP 2132 - Hangman [Santa's Cookie Countdown]</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+    <div class="snow-container" id="snowContainer"></div>
+        <header class="header">
+            <div class="header-decoration"></div>
+            <h1>Santa's Cookie Countdown</h1>
+            <p>Guess the Christmas word before Santa eats your cookie!</p>
+            <div class="header-decoration"></div>
+        </header>
+    <main class="game-container">
+        <section class="game-card">
+            <div class="game-info">
+                <div class="info-box">
+                    <span>CATEGORY</span>
+                    <h3>Christmas</h3>
+                </div>
+
+                <div class="info-box">
+                    <span>🩵 LIVES LEFT</span>
+                    <h3 id="lives">6</h3>
+                </div>
+            </div>
+        <section class="santa-section">
+            <h2>Santa is getting hungry...</h2>
+            <div class="santa-character">
+                    <img 
+                        src="images/santa.png" 
+                        id="santa" 
+                        alt="Santa Claus">
+            </div>
+
+            <div class="cookie-area">
+                <img 
+                    src="images/cookie-full.png" 
+                    alt="Christmas cookie"
+                    id="cookie"
+                    class="cookie">
+
+                    <p id="cookieMessage">
+                        Keep Santa away from your cookie!
+                    </p>
+            </div>
+
+            <div class="cookie-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <p class="progress-label">Cookie survival meter</p>
+        </section>
+
+        <section class="word-section">
+            <h2>Guess the Christmas Word!</h2>
+
+            <div class="hint-box">
+                <span>CHRISTMAS HINT</span>
+                <p id="hint">Loading your Christmas hint...</p>
+            </div>
+
+            <div class="word-display" id="wordDisplay">
+                Loading...
+            </div>
+
+            <p class="wrong-guesses">
+                Wrong guesses:
+                <span id="wrongLetters">None</span>
+            </p>
+        </section>
+            
+       <section class="keyboard-section">
+            <h3>Choose a Letter</h3>
+
+            <div class="keyboard" id="keyboard"></div>
+       </section>
+
+       <section class="result-section" id="resultSection">
+            <h2 id="resultTitle"></h2>
+            <p id="resultMessage"></p>
+            <button id="playAgain" class="play-again-button">
+                Play Again
+            </button>
+       </section>
+       </section>
+    </main>
+
+    <footer>
+        <div>
+            <p class="image-container">Eunice (EJVR)</p>
+        </div>
+
+        <div>
+            <p>Made with LOVE and Christmas magic</p>
+            <p>Santa's Cookie Countdown 2026</p>
+        </div>
+    </footer>
+</body>
+</html>

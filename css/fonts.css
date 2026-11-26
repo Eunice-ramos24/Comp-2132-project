@@ -1,0 +1,32 @@
+  @font-face {
+    font-family: "silk_screen";
+    src: url("../fonts/Almendra_SC,Carter_One,Mea_Culpa,Silkscreen/Silkscreen/Silkscreen-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "barcode";
+    src: url("../fonts/Almendra_SC,Carter_One,Libre_Barcode_39_Text,Mea_Culpa,Silkscreen/Libre_Barcode_39_Text/LibreBarcode39Text-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "culpa";
+    src: url("../fonts/Almendra_SC,Carter_One,Mea_Culpa,Silkscreen/Mea_Culpa/MeaCulpa-Regular.ttf");
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "carter";
+    src: url("../fonts/Almendra_SC,Carter_One,Libre_Barcode_39_Text,Mea_Culpa,Silkscreen/Carter_One/CarterOne-Regular.ttf");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "freckle_face";
+    src: url("../fonts/Almendra_SC,Carter_One,Freckle_Face,Libre_Barcode_39_Text,Mea_Culpa,etc/Freckle_Face/FreckleFace-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  

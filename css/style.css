@@ -1,0 +1,383 @@
+@import url("fonts.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "carter";
+  color: rgba(51, 51, 51, 0.2);
+  background: linear-gradient(135deg, #104b30, #176b43, #26794b);
+  overflow-x: hidden;
+}
+
+.header {
+  font-family: "culpa";
+  text-align: center;
+  padding: 35px 15px;
+  color: white;
+}
+.header h1 {
+  font-size: clamp(4.5rem, 5vw, 3.5rem);
+  color: #f5c451;
+  text-shadow: 3px 3px #8e1717;
+  margin: 15px 0;
+}
+.header p {
+  font-size: 1.8rem;
+}
+
+.head-decoration {
+  font-size: 1.5rem;
+  letter-spacing: 8px;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.game-card {
+  background: #fff8e9;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.game.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.info-box {
+  flex: 1;
+  text-align: center;
+  background: #c62828;
+  color: white;
+  border-radius: 12px;
+  padding: 15px;
+}
+.info-box span {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.info-box h3 {
+  margin-top: 7px;
+  font-size: 1.5rem;
+}
+
+.santa-section {
+  text-align: center;
+  padding: 20px 10px;
+}
+.santa-section h2 {
+  color: #176b43;
+  margin-bottom: 15px;
+}
+
+.santa-character {
+  margin: 15px auto;
+}
+.santa-character img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.eat-animation {
+  animation: santaEat 0.6s ease;
+}
+
+@keyframes santaEat {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  30% {
+    transform: rotate(-15deg) scale(1.2);
+  }
+  60% {
+    transform: rotate(15deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+.cookie-area {
+  margin: 10px auto;
+}
+
+.cookie {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+}
+
+.bite-1 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: rotate(-8deg);
+}
+
+.bite-2 {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: rotate(12deg) scale(0.9);
+  opacity: 0.9;
+}
+
+.bite-3 {
+  transform: rotate(-15deg) scale(0.8);
+  opacity: 0.75;
+  filter: brightness(0.85);
+}
+
+.bite-4 {
+  transform: rotate(20deg) scale(0.65);
+  opacity: 0.55;
+  filter: brightness(0.7);
+}
+
+.bite-5 {
+  transform: rotate(-20deg) scale(0.4);
+  opacity: 0.3;
+  filter: grayscale(0.7);
+}
+
+.bite-6 {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.cookie-gone {
+  animation: disapper 0.5s ease;
+}
+
+.cookie-saved {
+  animation: celebrate 0.8s infinite alternate;
+}
+
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes celebrate {
+  from {
+    transform: rotate(-10deg) scale(1);
+  }
+  to {
+    transform: rotate(10deg) scale(1.2);
+  }
+}
+#cookieMessage {
+  color: #c62828;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.cookie-progress {
+  height: 15px;
+  max-width: 350px;
+  margin: 15px auto 5px;
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #176b43, #74bd57);
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+
+.progress-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.word-section {
+  text-align: center;
+  margin: 30px 0;
+}
+.word-section h2 {
+  color: #c62828;
+  margin-bottom: 20px;
+}
+
+.hint-box {
+  background: #fff0c9;
+  border-left: 5px solid #f5c451;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+.hint-box span {
+  font-weight: bold;
+  color: #8e1717;
+  font-size: 0.8rem;
+}
+.hint-box p {
+  margin-top: 8px;
+}
+
+.word-display {
+  font-size: clamp(1.3rem, 5vw, 2.2rem);
+  font-weight: bold;
+  color: #176b43;
+  letter-spacing: 8px;
+  overflow-wrap: anywhere;
+  margin: 25px 0;
+}
+
+.word-animation {
+  animation: revealLetter 0.4s ease;
+}
+
+@keyframes revealLetter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.wrong-guesses {
+  color: #8e1717;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.keyboard-section {
+  text-align: center;
+}
+.keyboard-section h3 {
+  color: #176b43;
+  margin-bottom: 15px;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.letter-button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 5px;
+  background: #c62828;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.letter-button:hover:not(:disabled) {
+  background: #8e1717;
+  transform: translateY(-3px);
+}
+.letter-button:disabled {
+  background: #bbb;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.result-section {
+  display: none;
+  text-align: center;
+  padding: 25px 10px;
+  background: #fff0c9;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+.result-section h2 {
+  color: #c62828;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.result-section p {
+  line-height: 1.6;
+}
+
+.play-again-button {
+  background: #176b43;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.play-again-button:hover {
+  background: #104b30;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 25px 10px;
+  font-size: 0.85rem;
+  line-height: 2;
+}
+
+.snowflake {
+  position: fixed;
+  top: -20px;
+  color: white;
+  pointer-events: none;
+  z-index: 10;
+  animation: snowfall linear forwards;
+}
+
+@keyframes snowfall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+@media (max-width: 600px) {
+  .game-card {
+    padding: 18px;
+  }
+  .keyboard {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+  }
+  .letter-button {
+    padding: 10px 3px;
+    font-size: 0.9rem;
+  }
+  .game-info {
+    gap: 8px;
+  }
+  .info-box {
+    padding: 10px 5px;
+  }
+  .santa-character {
+    font-size: 5rem;
+  }
+  .cookie {
+    font-size: 5rem;
+  }
+  .word-display {
+    letter-spacing: 4px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
